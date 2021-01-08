@@ -33,7 +33,7 @@ void setup() {
 
   digitalWrite(PUMP, HIGH); // charge
   digitalWrite(LED_DISCHARGE, HIGH); // block
-  delay(1000);
+  delay(2000);
   Serial.println("Start");
   
 }
@@ -88,7 +88,7 @@ void loop() {
     //    Serial.print("ICap:");
     //    Serial.println(calc_current);
     if (mea_current < CURRENT_THRESHOLD or adc_to_voltage(led_sense) < 0.01 or calc_current < 0.01 ) break;
-    delay(5);
+    delay(3);
   }
 
   Serial.print("2ma Diode FV: ");
